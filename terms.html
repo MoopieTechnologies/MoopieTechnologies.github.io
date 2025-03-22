@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>利用規約 - StudyGenius</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+      body {
+        font-family: "Noto Sans JP", sans-serif;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "sea-pink": {
+                50: "#fcf4f4",
+                100: "#fae6e7",
+                200: "#f7d1d3",
+                300: "#f0b1b4",
+                400: "#e9969a",
+                500: "#d75c62",
+                600: "#c33f45",
+                700: "#a33237",
+                800: "#872d31",
+                900: "#712b2e",
+                950: "#3d1214",
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-sea-pink-50">
+    <!-- ヘッダー -->
+    <header class="bg-white shadow-sm fixed w-full z-50">
+      <nav
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <a href="index.html" class="text-2xl font-bold text-sea-pink-600"
+          >StudyGenius</a
+        >
+        <div class="hidden md:flex space-x-6">
+          <a
+            href="index.html#features"
+            class="text-gray-600 hover:text-sea-pink-600"
+            >機能</a
+          >
+          <a
+            href="index.html#how-it-works"
+            class="text-gray-600 hover:text-sea-pink-600"
+            >使い方</a
+          >
+          <a
+            href="index.html#pricing"
+            class="text-gray-600 hover:text-sea-pink-600"
+            >料金</a
+          >
+        </div>
+        <div class="flex space-x-4">
+          <a
+            href="login.html"
+            class="px-4 py-2 text-sea-pink-600 hover:text-sea-pink-700"
+            >ログイン</a
+          >
+          <a
+            href="signup.html"
+            class="px-4 py-2 bg-sea-pink-500 text-white rounded-lg hover:bg-sea-pink-600"
+            >新規登録</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="pt-24 pb-12 md:pt-32 md:pb-24">
+      <div class="container mx-auto px-4 max-w-3xl">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
+          利用規約
+        </h1>
+
+        <div class="bg-white rounded-lg shadow-lg p-8">
+          <div class="prose max-w-none">
+            <p class="text-gray-600 mb-6">
+              本利用規約（以下、「本規約」）は、StudyGenius（以下、「当サイト」）のサービス（以下、「本サービス」）を利用するすべてのユーザー（以下、「ユーザー」）に適用されます。本サービスを利用することにより、ユーザーは本規約に同意したものとみなされます。
+            </p>
+
+            <h2 class="text-xl font-bold text-gray-800 mt-8 mb-4">
+              第1条（適用）
+            </h2>
+            <div class="text-gray-700 space-y-2">
+              <p>
+                本規約は、ユーザーと当サイトとの間の本サービスの利用に関する一切の関係に適用されるものとします。
+              </p>
+              <p>
+                当サイトは、本サービスに関し、本規約のほか、ご利用ガイドライン等の各種規定を定めることができるものとします。
+              </p>
+            </div>
+
+            <h2 class="text-xl font-bold text-gray-800 mt-8 mb-4">
+              第2条（禁止事項）
+            </h2>
+            <p class="text-gray-700 mb-4">
+              ユーザーは、本サービスの利用に際して、以下の行為をしてはなりません。
+            </p>
+            <ul class="space-y-4 text-gray-700 mb-6">
+              <li class="flex items-start">
+                <i class="fas fa-times text-sea-pink-500 mt-1 mr-3"></i>
+                <span>法令または公序良俗に違反する行為</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-times text-sea-pink-500 mt-1 mr-3"></i>
+                <span>犯罪行為に関連する行為</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-times text-sea-pink-500 mt-1 mr-3"></i>
+                <span>本サービスの運営を妨害する行為</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-times text-sea-pink-500 mt-1 mr-3"></i>
+                <span>他のユーザーまたは第三者の権利を侵害する行為</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-times text-sea-pink-500 mt-1 mr-3"></i>
+                <span>その他、当サイトが不適切と判断する行為</span>
+              </li>
+            </ul>
+
+            <h2 class="text-xl font-bold text-gray-800 mt-8 mb-4">
+              第3条（本サービスの提供の停止・変更）
+            </h2>
+            <p class="text-gray-700 mb-4">
+              当サイトは、以下のいずれかに該当する場合、ユーザーに事前に通知することなく本サービスの全部または一部の提供を停止または変更することができます。
+            </p>
+            <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+              <li>システムの保守点検または更新を行う場合</li>
+              <li>
+                自然災害等の不可抗力により、本サービスの提供が困難となった場合
+              </li>
+              <li>その他、当サイトが本サービスの提供が困難と判断した場合</li>
+            </ul>
+            <p class="text-gray-700">
+              当サイトは、本サービスの提供の停止または変更によって生じたユーザーまたは第三者の不利益・損害について、一切の責任を負いません。
+            </p>
+
+            <h2 class="text-xl font-bold text-gray-800 mt-8 mb-4">
+              第4条（免責事項）
+            </h2>
+            <div class="text-gray-700 space-y-2">
+              <p>
+                当サイトは、本サービスに関していかなる保証も行わず、ユーザーが本サービスを利用することにより生じた損害について、一切の責任を負いません。
+              </p>
+              <p>
+                当サイトは、ユーザー間またはユーザーと第三者の間で生じたトラブルについて、一切関与せず、責任を負いません。
+              </p>
+            </div>
+
+            <h2 class="text-xl font-bold text-gray-800 mt-8 mb-4">
+              第5条（利用規約の変更）
+            </h2>
+            <div class="text-gray-700 space-y-2">
+              <p>
+                当サイトは、必要と判断した場合、ユーザーの事前の承諾を得ることなく、本規約を変更することができます。
+              </p>
+              <p>
+                変更後の本規約は、当サイト上に掲示した時点で効力を生じるものとします。
+              </p>
+            </div>
+
+            <h2 class="text-xl font-bold text-gray-800 mt-8 mb-4">
+              第6条（準拠法・裁判管轄）
+            </h2>
+            <div class="text-gray-700 space-y-2">
+              <p>本規約の解釈には、日本法を準拠法とします。</p>
+              <p>
+                本サービスに関して紛争が生じた場合、当サイトの運営者所在地を管轄する裁判所を専属的合意管轄とします。
+              </p>
+            </div>
+
+            <p class="text-right text-gray-600 mt-8">以上</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- フッター -->
+    <footer class="bg-sea-pink-950 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">StudyGenius</h3>
+            <p class="text-sea-pink-100">
+              AIを活用した次世代の学習支援プラットフォーム
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">リンク</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="index.html#features"
+                  class="text-sea-pink-100 hover:text-white"
+                  >機能</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#how-it-works"
+                  class="text-sea-pink-100 hover:text-white"
+                  >使い方</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#pricing"
+                  class="text-sea-pink-100 hover:text-white"
+                  >料金</a
+                >
+              </li>
+              <li>
+                <a href="terms.html" class="text-sea-pink-100 hover:text-white"
+                  >利用規約</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">お問い合わせ</h3>
+            <p class="text-sea-pink-100">
+              ご質問やご要望がございましたら、お気軽にお問い合わせください。
+            </p>
+            <a
+              href="mailto:contact@studygenius.jp"
+              class="text-sea-pink-200 hover:text-sea-pink-100"
+              >contact@studygenius.jp</a
+            >
+          </div>
+        </div>
+        <div
+          class="mt-8 pt-8 border-t border-sea-pink-900 text-center text-sea-pink-200"
+        >
+          <p>&copy; 2024 StudyGenius. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

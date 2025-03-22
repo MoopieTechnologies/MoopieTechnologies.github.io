@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyGenius - Smart Exam Preparation with AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap");
+      body {
+        font-family: "Noto Sans", sans-serif;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "sea-pink": {
+                50: "#fcf4f4",
+                100: "#fae6e7",
+                200: "#f7d1d3",
+                300: "#f0b1b4",
+                400: "#e9969a",
+                500: "#d75c62",
+                600: "#c33f45",
+                700: "#a33237",
+                800: "#872d31",
+                900: "#712b2e",
+                950: "#3d1214",
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-sea-pink-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed w-full z-50">
+      <nav
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="text-2xl font-bold text-sea-pink-600">StudyGenius</div>
+        <div class="hidden md:flex space-x-6">
+          <a href="#features" class="text-gray-600 hover:text-sea-pink-600"
+            >Features</a
+          >
+          <a href="#how-it-works" class="text-gray-600 hover:text-sea-pink-600"
+            >How it Works</a
+          >
+          <a href="#pricing" class="text-gray-600 hover:text-sea-pink-600"
+            >Pricing</a
+          >
+        </div>
+        <div class="flex space-x-4">
+          <a
+            href="login.html"
+            class="px-4 py-2 text-sea-pink-600 hover:text-sea-pink-700"
+            >Login</a
+          >
+          <a
+            href="signup.html"
+            class="px-4 py-2 bg-sea-pink-500 text-white rounded-lg hover:bg-sea-pink-600"
+            >Sign Up</a
+          >
+          <a
+            href="index.html"
+            class="px-4 py-2 text-sea-pink-600 hover:text-sea-pink-700"
+            >日本語</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Visual -->
+    <section
+      class="pt-24 pb-12 md:pt-32 md:pb-24 bg-gradient-to-br from-sea-pink-50 to-sea-pink-100"
+    >
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-8 md:mb-0">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+              AI-Powered<br />Exam Preparation Just for You
+            </h1>
+            <p class="text-lg text-gray-600 mb-8">
+              Simply upload your textbooks, and AI will automatically generate
+              optimal exam questions.<br />
+              Achieve better grades with smart learning.
+            </p>
+            <a
+              href="signup.html"
+              class="inline-block px-8 py-4 bg-sea-pink-500 text-white rounded-lg text-lg font-semibold hover:bg-sea-pink-600 transition-colors"
+            >
+              Start Free
+            </a>
+          </div>
+          <div class="md:w-1/2">
+            <img
+              src="top-image.jpg"
+              alt="StudyGenius App Image"
+              class="rounded-lg shadow-xl w-full h-auto max-w-[789px] max-h-[1024px] object-contain"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+          Key Features
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="p-6 bg-white rounded-lg shadow-lg">
+            <div class="text-sea-pink-500 text-4xl mb-4">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">AI Question Generation</h3>
+            <p class="text-gray-600">
+              Analyzes textbook content and automatically generates optimal exam
+              questions. Supports various formats including multiple choice and
+              written answers.
+            </p>
+          </div>
+          <div class="p-6 bg-white rounded-lg shadow-lg">
+            <div class="text-sea-pink-500 text-4xl mb-4">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Performance Analysis</h3>
+            <p class="text-gray-600">
+              Aggregates and analyzes correct answer rates to visualize weak
+              areas. Supports efficient learning.
+            </p>
+          </div>
+          <div class="p-6 bg-white rounded-lg shadow-lg">
+            <div class="text-sea-pink-500 text-4xl mb-4">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Mobile Support</h3>
+            <p class="text-gray-600">
+              Comfortable learning experience on smartphones. Make efficient use
+              of commuting and travel time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section id="how-it-works" class="py-16 bg-sea-pink-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+          How it Works
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-sea-pink-500 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4"
+            >
+              1
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Create Account</h3>
+            <p class="text-gray-600">
+              Start immediately with simple registration
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-sea-pink-500 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4"
+            >
+              2
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Upload Textbooks</h3>
+            <p class="text-gray-600">Register required pages with photos</p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-sea-pink-500 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4"
+            >
+              3
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Generate Questions</h3>
+            <p class="text-gray-600">AI creates optimal questions</p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-sea-pink-500 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4"
+            >
+              4
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Start Learning</h3>
+            <p class="text-gray-600">Efficiently prepare for exams</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+          Pricing Plans
+        </h2>
+        <div class="max-w-3xl mx-auto">
+          <div class="bg-white rounded-lg shadow-xl overflow-hidden">
+            <div class="p-8 text-center">
+              <h3 class="text-2xl font-bold mb-4">Free Plan</h3>
+              <div class="text-4xl font-bold mb-6">
+                ¥0<span class="text-lg text-gray-600">/month</span>
+              </div>
+              <ul class="text-left space-y-4 mb-8">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-sea-pink-500 mr-2"></i>
+                  <span>Register up to 1 subject</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-sea-pink-500 mr-2"></i>
+                  <span>Generate up to 10 questions per month</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-sea-pink-500 mr-2"></i>
+                  <span>Basic performance analysis</span>
+                </li>
+              </ul>
+              <a
+                href="signup.html"
+                class="inline-block w-full px-6 py-3 bg-sea-pink-500 text-white rounded-lg font-semibold hover:bg-sea-pink-600 transition-colors"
+              >
+                Start Free
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-sea-pink-950 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">StudyGenius</h3>
+            <p class="text-sea-pink-100">
+              Next-generation learning support platform powered by AI
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#features" class="text-sea-pink-100 hover:text-white"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#how-it-works"
+                  class="text-sea-pink-100 hover:text-white"
+                  >How it Works</a
+                >
+              </li>
+              <li>
+                <a href="#pricing" class="text-sea-pink-100 hover:text-white"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a href="terms.html" class="text-sea-pink-100 hover:text-white"
+                  >Terms of Service</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Contact</h3>
+            <p class="text-sea-pink-100">
+              Please feel free to contact us with any questions or requests.
+            </p>
+            <a
+              href="mailto:contact@studygenius.jp"
+              class="text-sea-pink-200 hover:text-sea-pink-100"
+              >contact@studygenius.jp</a
+            >
+          </div>
+        </div>
+        <div
+          class="mt-8 pt-8 border-t border-sea-pink-900 text-center text-sea-pink-200"
+        >
+          <p>&copy; 2024 StudyGenius. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

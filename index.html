@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyGenius - AIで試験対策をスマートに</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+      body {
+        font-family: "Noto Sans JP", sans-serif;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "sea-pink": {
+                50: "#fcf4f4",
+                100: "#fae6e7",
+                200: "#f7d1d3",
+                300: "#f0b1b4",
+                400: "#e9969a",
+                500: "#d75c62",
+                600: "#c33f45",
+                700: "#a33237",
+                800: "#872d31",
+                900: "#712b2e",
+                950: "#3d1214",
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-sea-pink-50">
+    <!-- ヘッダー -->
+    <header class="bg-white shadow-sm fixed w-full z-50">
+      <nav
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="text-2xl font-bold text-sea-pink-600">StudyGenius</div>
+        <div class="hidden md:flex space-x-6">
+          <a href="#features" class="text-gray-600 hover:text-sea-pink-600"
+            >機能</a
+          >
+          <a href="#how-it-works" class="text-gray-600 hover:text-sea-pink-600"
+            >使い方</a
+          >
+          <a href="#pricing" class="text-gray-600 hover:text-sea-pink-600"
+            >料金</a
+          >
+          <a href="#contact" class="text-gray-600 hover:text-sea-pink-600"
+            >お問い合わせ</a
+          >
+        </div>
+        <div class="flex space-x-4">
+          <div class="relative">
+            <button
+              id="languageButton"
+              class="px-4 py-2 text-sea-pink-600 hover:text-sea-pink-700 flex items-center space-x-2"
+              onclick="toggleLanguageMenu()"
+            >
+              <span class="flag-icon">🇯🇵</span>
+              <span>日本語</span>
+              <i class="fas fa-chevron-down ml-1"></i>
+            </button>
+            <div
+              id="languageMenu"
+              class="hidden absolute right-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl z-50"
+            >
+              <a
+                href="index.html"
+                class="block px-4 py-2 text-gray-800 hover:bg-sea-pink-50 flex items-center space-x-3"
+              >
+                <span class="flag-icon">🇯🇵</span>
+                <span>日本語</span>
+              </a>
+              <a
+                href="index_en.html"
+                class="block px-4 py-2 text-gray-800 hover:bg-sea-pink-50 flex items-center space-x-3"
+              >
+                <span class="flag-icon">🇺🇸</span>
+                <span>English</span>
+              </a>
+              <a
+                href="index_zh.html"
+                class="block px-4 py-2 text-gray-800 hover:bg-sea-pink-50 flex items-center space-x-3"
+              >
+                <span class="flag-icon">🇨🇳</span>
+                <span>中文</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <script>
+      function toggleLanguageMenu() {
+        const menu = document.getElementById("languageMenu");
+        menu.classList.toggle("hidden");
+      }
+
+      // クリック以外の場所をクリックした時にメニューを閉じる
+      document.addEventListener("click", function (event) {
+        const menu = document.getElementById("languageMenu");
+        const button = document.getElementById("languageButton");
+        if (!button.contains(event.target) && !menu.contains(event.target)) {
+          menu.classList.add("hidden");
+        }
+      });
+    </script>
+
+    <!-- メインビジュアル -->
+    <section
+      class="pt-24 pb-12 md:pt-32 md:pb-24 bg-gradient-to-br from-sea-pink-50 to-sea-pink-100"
+    >
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-8 md:mb-0">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+              AIが作る、<br />あなただけの試験対策
+            </h1>
+            <p class="text-lg text-gray-600 mb-8">
+              教科書をアップロードするだけで、AIが最適な試験問題を自動生成。<br />
+              スマートな学習で、成績アップを実現しましょう。
+            </p>
+            <a
+              href="signup.html"
+              class="inline-block px-8 py-4 bg-sea-pink-500 text-white rounded-lg text-lg font-semibold hover:bg-sea-pink-600 transition-colors"
+            >
+              無料で始める
+            </a>
+          </div>
+          <div class="md:w-1/2">
+            <img
+              src="https://placehold.co/400x225/EEE/31343C.png"
+              alt="StudyGenius アプリのイメージ"
+              class="rounded-lg shadow-xl w-full h-auto max-w-[789px] max-h-[1024px] object-contain"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 特徴セクション -->
+    <section id="features" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+          主な機能
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="p-6 bg-white rounded-lg shadow-lg">
+            <div class="text-sea-pink-500 text-4xl mb-4 flex justify-center">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4 text-center">AI問題生成</h3>
+            <p class="text-gray-600">
+              教科書の内容を解析し、最適な試験問題を自動生成。選択式や記述式など、様々な形式に対応。
+            </p>
+          </div>
+          <div class="p-6 bg-white rounded-lg shadow-lg">
+            <div class="text-sea-pink-500 text-4xl mb-4 flex justify-center">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4 text-center">成績分析</h3>
+            <p class="text-gray-600">
+              問題の正答率を集計・分析し、苦手分野を可視化。効率的な学習をサポートします。
+            </p>
+          </div>
+          <div class="p-6 bg-white rounded-lg shadow-lg">
+            <div class="text-sea-pink-500 text-4xl mb-4 flex justify-center">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4 text-center">モバイル対応</h3>
+            <p class="text-gray-600">
+              スマートフォンでも快適に学習可能。通学中や移動時間も効率的に活用できます。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 使い方セクション -->
+    <section id="how-it-works" class="py-16 bg-sea-pink-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+          使い方
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-sea-pink-500 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4"
+            >
+              1
+            </div>
+            <h3 class="text-xl font-semibold mb-2">アカウント作成</h3>
+            <p class="text-gray-600">簡単な登録で即座に利用開始</p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-sea-pink-500 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4"
+            >
+              2
+            </div>
+            <h3 class="text-xl font-semibold mb-2">教科書をアップロード</h3>
+            <p class="text-gray-600">必要なページを写真で登録</p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-sea-pink-500 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4"
+            >
+              3
+            </div>
+            <h3 class="text-xl font-semibold mb-2">問題を生成</h3>
+            <p class="text-gray-600">AIが最適な問題を作成</p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-sea-pink-500 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4"
+            >
+              4
+            </div>
+            <h3 class="text-xl font-semibold mb-2">学習開始</h3>
+            <p class="text-gray-600">効率的に試験対策を実施</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 料金セクション -->
+    <section id="pricing" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+          料金プラン
+        </h2>
+        <div class="max-w-3xl mx-auto">
+          <div class="bg-white rounded-lg shadow-xl overflow-hidden">
+            <div class="p-8 text-center">
+              <h3 class="text-2xl font-bold mb-4">無料プラン</h3>
+              <div class="text-4xl font-bold mb-6">
+                ¥0<span class="text-lg text-gray-600">/月</span>
+              </div>
+              <ul class="text-left space-y-4 mb-8">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-sea-pink-500 mr-2"></i>
+                  <span>1教科まで登録可能</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-sea-pink-500 mr-2"></i>
+                  <span>月10問まで問題生成可能</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-sea-pink-500 mr-2"></i>
+                  <span>基本的な成績分析</span>
+                </li>
+              </ul>
+              <a
+                href="signup.html"
+                class="inline-block w-full px-6 py-3 bg-sea-pink-500 text-white rounded-lg font-semibold hover:bg-sea-pink-600 transition-colors"
+              >
+                無料で始める
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- お問い合わせフォーム -->
+    <section id="contact" class="py-16 bg-sea-pink-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+          お問い合わせ
+        </h2>
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-xl p-8">
+          <!-- フォーム本体 -->
+          <form
+            id="contactForm"
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfhFZZ8QPD9iIUpfeanTgUyI6ZgB-e6uYaMenIbnI3m8dfSTA/formResponse"
+            method="POST"
+            class="space-y-6"
+          >
+            <div class="space-y-4">
+              <div>
+                <label
+                  for="name"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  お名前 <span class="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  name="entry.777262386"
+                  id="name"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-sea-pink-500 focus:border-sea-pink-500"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">
+                  無職の質問 <span class="text-red-500">*</span>
+                </label>
+                <div class="space-y-2">
+                  <label class="flex items-center">
+                    <input
+                      type="checkbox"
+                      name="entry.712011450"
+                      value="無敵"
+                      class="h-4 w-4 text-sea-pink-600 focus:ring-sea-pink-500 border-gray-300 rounded"
+                    />
+                    <span class="ml-2 text-gray-700">無敵</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input
+                      type="checkbox"
+                      name="entry.712011450"
+                      value="金"
+                      class="h-4 w-4 text-sea-pink-600 focus:ring-sea-pink-500 border-gray-300 rounded"
+                    />
+                    <span class="ml-2 text-gray-700">金</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-center">
+              <button
+                type="submit"
+                id="submitButton"
+                class="px-8 py-3 bg-sea-pink-500 text-white rounded-lg hover:bg-sea-pink-600 transition-colors font-semibold"
+              >
+                送信する
+              </button>
+            </div>
+          </form>
+
+          <!-- 送信中の表示 -->
+          <div id="loadingState" class="hidden text-center py-12">
+            <div
+              class="inline-block animate-spin rounded-full h-12 w-12 border-4 border-sea-pink-500 border-t-transparent"
+            ></div>
+            <p class="mt-4 text-gray-600">送信中です...</p>
+          </div>
+
+          <!-- 送信完了の表示 -->
+          <div id="successState" class="hidden text-center py-12">
+            <div class="text-sea-pink-500 text-5xl mb-6">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+              お問い合わせありがとうございます
+            </h3>
+            <p class="text-gray-600">
+              内容を確認次第、担当者よりご連絡させていただきます。
+            </p>
+          </div>
+        </div>
+
+        <script>
+          document
+            .getElementById("contactForm")
+            .addEventListener("submit", async function (e) {
+              e.preventDefault();
+
+              // フォームとボタンを非表示にし、ローディングを表示
+              this.style.display = "none";
+              document.getElementById("loadingState").style.display = "block";
+
+              // フォームデータの準備
+              const formData = new FormData(this);
+
+              try {
+                // Google FormsのCORSポリシーを回避するため、no-corsモードを使用
+                await fetch(this.action, {
+                  method: "POST",
+                  mode: "no-cors",
+                  body: formData,
+                });
+
+                // 送信完了後、ローディングを非表示にし、完了メッセージを表示
+                document.getElementById("loadingState").style.display = "none";
+                document.getElementById("successState").style.display = "block";
+              } catch (error) {
+                console.error("送信エラー:", error);
+                // エラー時はフォームを再表示
+                this.style.display = "block";
+                document.getElementById("loadingState").style.display = "none";
+                alert("送信に失敗しました。もう一度お試しください。");
+              }
+            });
+        </script>
+      </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="bg-sea-pink-950 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">StudyGenius</h3>
+            <p class="text-sea-pink-100">
+              AIを活用した次世代の学習支援プラットフォーム
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">リンク</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#features" class="text-sea-pink-100 hover:text-white"
+                  >機能</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#how-it-works"
+                  class="text-sea-pink-100 hover:text-white"
+                  >使い方</a
+                >
+              </li>
+              <li>
+                <a href="#pricing" class="text-sea-pink-100 hover:text-white"
+                  >料金</a
+                >
+              </li>
+              <li>
+                <a href="terms.html" class="text-sea-pink-100 hover:text-white"
+                  >利用規約</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">お問い合わせ</h3>
+            <p class="text-sea-pink-100">
+              ご質問やご要望がございましたら、お気軽にお問い合わせください。
+            </p>
+            <a
+              href="mailto:contact@studygenius.jp"
+              class="text-sea-pink-200 hover:text-sea-pink-100"
+              >contact@studygenius.jp</a
+            >
+          </div>
+        </div>
+        <div
+          class="mt-8 pt-8 border-t border-sea-pink-900 text-center text-sea-pink-200"
+        >
+          <p>&copy; 2024 StudyGenius. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyGenius - 用AI让考试备考更智能</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap");
+      body {
+        font-family: "Noto Sans SC", sans-serif;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "sea-pink": {
+                50: "#fcf4f4",
+                100: "#fae6e7",
+                200: "#f7d1d3",
+                300: "#f0b1b4",
+                400: "#e9969a",
+                500: "#d75c62",
+                600: "#c33f45",
+                700: "#a33237",
+                800: "#872d31",
+                900: "#712b2e",
+                950: "#3d1214",
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-sea-pink-50">
+    <!-- 页眉 -->
+    <header class="bg-white shadow-sm fixed w-full z-50">
+      <nav
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="text-2xl font-bold text-sea-pink-600">StudyGenius</div>
+        <div class="hidden md:flex space-x-6">
+          <a href="#features" class="text-gray-600 hover:text-sea-pink-600"
+            >功能</a
+          >
+          <a href="#how-it-works" class="text-gray-600 hover:text-sea-pink-600"
+            >使用方法</a
+          >
+          <a href="#pricing" class="text-gray-600 hover:text-sea-pink-600"
+            >价格</a
+          >
+          <a href="#contact" class="text-gray-600 hover:text-sea-pink-600"
+            >联系我们</a
+          >
+        </div>
+        <div class="flex space-x-4">
+          <a
+            href="login.html"
+            class="px-4 py-2 text-sea-pink-600 hover:text-sea-pink-700"
+            >登录</a
+          >
+          <a
+            href="signup.html"
+            class="px-4 py-2 bg-sea-pink-500 text-white rounded-lg hover:bg-sea-pink-600"
+            >注册</a
+          >
+          <a
+            href="index.html"
+            class="px-4 py-2 text-sea-pink-600 hover:text-sea-pink-700"
+            >日本語</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- 主视觉 -->
+    <section
+      class="pt-24 pb-12 md:pt-32 md:pb-24 bg-gradient-to-br from-sea-pink-50 to-sea-pink-100"
+    >
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-8 md:mb-0">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+              AI为您定制<br />专属考试备考方案
+            </h1>
+            <p class="text-lg text-gray-600 mb-8">
+              只需上传教科书，AI就能自动生成最优化的考试题目。<br />
+              通过智能学习，实现成绩提升。
+            </p>
+            <a
+              href="signup.html"
+              class="inline-block px-8 py-4 bg-sea-pink-500 text-white rounded-lg text-lg font-semibold hover:bg-sea-pink-600 transition-colors"
+            >
+              免费开始
+            </a>
+          </div>
+          <div class="md:w-1/2">
+            <img
+              src="top-image.jpg"
+              alt="StudyGenius应用界面"
+              class="rounded-lg shadow-xl w-full h-auto max-w-[789px] max-h-[1024px] object-contain"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 特点部分 -->
+    <section id="features" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+          主要功能
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="p-6 bg-white rounded-lg shadow-lg">
+            <div class="text-sea-pink-500 text-4xl mb-4">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">AI题目生成</h3>
+            <p class="text-gray-600">
+              分析教科书内容，自动生成最优化的考试题目。支持选择题和问答题等多种形式。
+            </p>
+          </div>
+          <div class="p-6 bg-white rounded-lg shadow-lg">
+            <div class="text-sea-pink-500 text-4xl mb-4">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">成绩分析</h3>
+            <p class="text-gray-600">
+              统计和分析题目的正确率，可视化薄弱环节。为您提供高效的学习支持。
+            </p>
+          </div>
+          <div class="p-6 bg-white rounded-lg shadow-lg">
+            <div class="text-sea-pink-500 text-4xl mb-4">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">移动端支持</h3>
+            <p class="text-gray-600">
+              支持手机端舒适学习。充分利用通勤和移动时间。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 使用方法部分 -->
+    <section id="how-it-works" class="py-16 bg-sea-pink-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+          使用方法
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-sea-pink-500 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4"
+            >
+              1
+            </div>
+            <h3 class="text-xl font-semibold mb-2">创建账号</h3>
+            <p class="text-gray-600">简单注册即可立即使用</p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-sea-pink-500 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4"
+            >
+              2
+            </div>
+            <h3 class="text-xl font-semibold mb-2">上传教科书</h3>
+            <p class="text-gray-600">拍照上传所需页面</p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-sea-pink-500 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4"
+            >
+              3
+            </div>
+            <h3 class="text-xl font-semibold mb-2">生成题目</h3>
+            <p class="text-gray-600">AI生成最优化题目</p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-sea-pink-500 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4"
+            >
+              4
+            </div>
+            <h3 class="text-xl font-semibold mb-2">开始学习</h3>
+            <p class="text-gray-600">高效进行考试备考</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 价格部分 -->
+    <section id="pricing" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+          价格方案
+        </h2>
+        <div class="max-w-3xl mx-auto">
+          <div class="bg-white rounded-lg shadow-xl overflow-hidden">
+            <div class="p-8 text-center">
+              <h3 class="text-2xl font-bold mb-4">免费方案</h3>
+              <div class="text-4xl font-bold mb-6">
+                ¥0<span class="text-lg text-gray-600">/月</span>
+              </div>
+              <ul class="text-left space-y-4 mb-8">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-sea-pink-500 mr-2"></i>
+                  <span>可注册1个科目</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-sea-pink-500 mr-2"></i>
+                  <span>每月可生成10道题目</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-sea-pink-500 mr-2"></i>
+                  <span>基础成绩分析</span>
+                </li>
+              </ul>
+              <a
+                href="signup.html"
+                class="inline-block w-full px-6 py-3 bg-sea-pink-500 text-white rounded-lg font-semibold hover:bg-sea-pink-600 transition-colors"
+              >
+                免费开始
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 联系表单 -->
+    <section id="contact" class="py-16 bg-sea-pink-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+          联系我们
+        </h2>
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-xl p-8">
+          <!-- 表单主体 -->
+          <form
+            id="contactForm"
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfhFZZ8QPD9iIUpfeanTgUyI6ZgB-e6uYaMenIbnI3m8dfSTA/formResponse"
+            method="POST"
+            class="space-y-6"
+          >
+            <div class="space-y-4">
+              <div>
+                <label
+                  for="name"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  姓名 <span class="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  name="entry.777262386"
+                  id="name"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-sea-pink-500 focus:border-sea-pink-500"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">
+                  无业问题 <span class="text-red-500">*</span>
+                </label>
+                <div class="space-y-2">
+                  <label class="flex items-center">
+                    <input
+                      type="checkbox"
+                      name="entry.712011450"
+                      value="无敌"
+                      class="h-4 w-4 text-sea-pink-600 focus:ring-sea-pink-500 border-gray-300 rounded"
+                    />
+                    <span class="ml-2 text-gray-700">无敌</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input
+                      type="checkbox"
+                      name="entry.712011450"
+                      value="金"
+                      class="h-4 w-4 text-sea-pink-600 focus:ring-sea-pink-500 border-gray-300 rounded"
+                    />
+                    <span class="ml-2 text-gray-700">金</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-center">
+              <button
+                type="submit"
+                id="submitButton"
+                class="px-8 py-3 bg-sea-pink-500 text-white rounded-lg hover:bg-sea-pink-600 transition-colors font-semibold"
+              >
+                提交
+              </button>
+            </div>
+          </form>
+
+          <!-- 发送中显示 -->
+          <div id="loadingState" class="hidden text-center py-12">
+            <div
+              class="inline-block animate-spin rounded-full h-12 w-12 border-4 border-sea-pink-500 border-t-transparent"
+            ></div>
+            <p class="mt-4 text-gray-600">发送中...</p>
+          </div>
+
+          <!-- 发送完成显示 -->
+          <div id="successState" class="hidden text-center py-12">
+            <div class="text-sea-pink-500 text-5xl mb-6">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">感谢您的咨询</h3>
+            <p class="text-gray-600">我们会尽快确认内容并由专人与您联系。</p>
+          </div>
+        </div>
+
+        <script>
+          document
+            .getElementById("contactForm")
+            .addEventListener("submit", async function (e) {
+              e.preventDefault();
+
+              // 隐藏表单和按钮，显示加载中
+              this.style.display = "none";
+              document.getElementById("loadingState").style.display = "block";
+
+              // 准备表单数据
+              const formData = new FormData(this);
+
+              try {
+                // 使用no-cors模式避免Google Forms的CORS策略
+                await fetch(this.action, {
+                  method: "POST",
+                  mode: "no-cors",
+                  body: formData,
+                });
+
+                // 发送完成后，隐藏加载中，显示完成消息
+                document.getElementById("loadingState").style.display = "none";
+                document.getElementById("successState").style.display = "block";
+              } catch (error) {
+                console.error("发送错误:", error);
+                // 发生错误时重新显示表单
+                this.style.display = "block";
+                document.getElementById("loadingState").style.display = "none";
+                alert("发送失败。请重试。");
+              }
+            });
+        </script>
+      </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-sea-pink-950 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">StudyGenius</h3>
+            <p class="text-sea-pink-100">利用AI技术的新一代学习支持平台</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">链接</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#features" class="text-sea-pink-100 hover:text-white"
+                  >功能</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#how-it-works"
+                  class="text-sea-pink-100 hover:text-white"
+                  >使用方法</a
+                >
+              </li>
+              <li>
+                <a href="#pricing" class="text-sea-pink-100 hover:text-white"
+                  >价格</a
+                >
+              </li>
+              <li>
+                <a href="terms.html" class="text-sea-pink-100 hover:text-white"
+                  >使用条款</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">联系我们</h3>
+            <p class="text-sea-pink-100">
+              如有任何问题或建议，请随时与我们联系。
+            </p>
+            <a
+              href="mailto:contact@studygenius.jp"
+              class="text-sea-pink-200 hover:text-sea-pink-100"
+              >contact@studygenius.jp</a
+            >
+          </div>
+        </div>
+        <div
+          class="mt-8 pt-8 border-t border-sea-pink-900 text-center text-sea-pink-200"
+        >
+          <p>&copy; 2024 StudyGenius. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

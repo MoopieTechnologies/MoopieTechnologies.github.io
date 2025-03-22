@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>送信完了 - StudyGenius</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+      body {
+        font-family: "Noto Sans JP", sans-serif;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "sea-pink": {
+                50: "#fcf4f4",
+                100: "#fae6e7",
+                200: "#f7d1d3",
+                300: "#f0b1b4",
+                400: "#e9969a",
+                500: "#d75c62",
+                600: "#c33f45",
+                700: "#a33237",
+                800: "#872d31",
+                900: "#712b2e",
+                950: "#3d1214",
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-sea-pink-50 min-h-screen flex items-center justify-center">
+    <div class="container mx-auto px-4 py-16">
+      <div
+        class="max-w-2xl mx-auto bg-white rounded-lg shadow-xl p-8 text-center"
+      >
+        <div class="text-sea-pink-500 text-5xl mb-6">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <h1 class="text-3xl font-bold text-gray-800 mb-4">
+          お問い合わせありがとうございます
+        </h1>
+        <p class="text-gray-600 mb-8">
+          内容を確認次第、担当者よりご連絡させていただきます。
+        </p>
+        <a
+          href="index.html"
+          class="inline-block px-8 py-3 bg-sea-pink-500 text-white rounded-lg hover:bg-sea-pink-600 transition-colors font-semibold"
+        >
+          トップページに戻る
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
