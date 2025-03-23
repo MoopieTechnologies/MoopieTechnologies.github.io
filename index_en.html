@@ -20,18 +20,18 @@
         theme: {
           extend: {
             colors: {
-              "sea-pink": {
-                50: "#fcf4f4",
-                100: "#fae6e7",
-                200: "#f7d1d3",
-                300: "#f0b1b4",
-                400: "#e9969a",
-                500: "#d75c62",
-                600: "#c33f45",
-                700: "#a33237",
-                800: "#872d31",
-                900: "#712b2e",
-                950: "#3d1214",
+              "warm-orange": {
+                50: "#fff7ed",
+                100: "#ffedd5",
+                200: "#fed7aa",
+                300: "#fdba74",
+                400: "#fb923c",
+                500: "#f97316",
+                600: "#ea580c",
+                700: "#c2410c",
+                800: "#9a3412",
+                900: "#7c2d12",
+                950: "#431407",
               },
             },
           },
@@ -39,24 +39,26 @@
       };
     </script>
   </head>
-  <body class="bg-sea-pink-50">
+  <body class="bg-warm-orange-50">
     <!-- Header -->
     <header class="bg-white shadow-sm fixed w-full z-50">
       <nav
         class="container mx-auto px-4 py-4 flex justify-between items-center"
       >
-        <div class="text-2xl font-bold text-sea-pink-600">StudyGenius</div>
+        <div class="text-2xl font-bold text-warm-orange-600">StudyGenius</div>
         <div class="hidden md:flex space-x-6">
-          <a href="#features" class="text-gray-600 hover:text-sea-pink-600"
+          <a href="#features" class="text-gray-600 hover:text-warm-orange-600"
             >Features</a
           >
-          <a href="#how-it-works" class="text-gray-600 hover:text-sea-pink-600"
+          <a
+            href="#how-it-works"
+            class="text-gray-600 hover:text-warm-orange-600"
             >How it Works</a
           >
-          <a href="#pricing" class="text-gray-600 hover:text-sea-pink-600"
+          <a href="#pricing" class="text-gray-600 hover:text-warm-orange-600"
             >Pricing</a
           >
-          <a href="#contact" class="text-gray-600 hover:text-sea-pink-600"
+          <a href="#contact" class="text-gray-600 hover:text-warm-orange-600"
             >Contact</a
           >
         </div>
@@ -64,7 +66,7 @@
           <div class="relative">
             <button
               id="languageButton"
-              class="px-4 py-2 text-sea-pink-600 hover:text-sea-pink-700 flex items-center space-x-2"
+              class="px-4 py-2 text-warm-orange-600 hover:text-warm-orange-700 flex items-center space-x-2"
               onclick="toggleLanguageMenu()"
             >
               <span class="flag-icon">🇺🇸</span>
@@ -77,21 +79,21 @@
             >
               <a
                 href="index.html"
-                class="block px-4 py-2 text-gray-800 hover:bg-sea-pink-50 flex items-center space-x-3"
+                class="block px-4 py-2 text-gray-800 hover:bg-warm-orange-50 flex items-center space-x-3"
               >
                 <span class="flag-icon">🇯🇵</span>
                 <span>日本語</span>
               </a>
               <a
                 href="index_en.html"
-                class="block px-4 py-2 text-gray-800 hover:bg-sea-pink-50 flex items-center space-x-3"
+                class="block px-4 py-2 text-gray-800 hover:bg-warm-orange-50 flex items-center space-x-3"
               >
                 <span class="flag-icon">🇺🇸</span>
                 <span>English</span>
               </a>
               <a
                 href="index_zh.html"
-                class="block px-4 py-2 text-gray-800 hover:bg-sea-pink-50 flex items-center space-x-3"
+                class="block px-4 py-2 text-gray-800 hover:bg-warm-orange-50 flex items-center space-x-3"
               >
                 <span class="flag-icon">🇨🇳</span>
                 <span>中文</span>
@@ -120,22 +122,22 @@
 
     <!-- Main Visual -->
     <section
-      class="pt-24 pb-12 md:pt-32 md:pb-24 bg-gradient-to-br from-sea-pink-50 to-sea-pink-100"
+      class="pt-24 pb-12 md:pt-32 md:pb-24 bg-gradient-to-br from-warm-orange-50 to-warm-orange-100"
     >
       <div class="container mx-auto px-4">
         <div class="flex flex-col md:flex-row items-center">
           <div class="md:w-1/2 mb-8 md:mb-0">
             <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              AI-Powered<br />Exam Preparation Just for You
+              AI-Powered Support<br />for Your New Beginning
             </h1>
             <p class="text-lg text-gray-600 mb-8">
-              Simply upload your textbooks, and AI will automatically generate
-              optimal exam questions.<br />
-              Achieve better grades with smart learning.
+              Learn essential job-hunting skills efficiently.<br />
+              Let AI support your learning journey and guide you towards your
+              dreams.
             </p>
             <a
               href="signup.html"
-              class="inline-block px-8 py-4 bg-sea-pink-500 text-white rounded-lg text-lg font-semibold hover:bg-sea-pink-600 transition-colors"
+              class="inline-block px-8 py-4 bg-warm-orange-500 text-white rounded-lg text-lg font-semibold hover:bg-warm-orange-600 transition-colors"
             >
               Start Free
             </a>
@@ -159,40 +161,39 @@
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="p-6 bg-white rounded-lg shadow-lg">
-            <div class="text-sea-pink-500 text-4xl mb-4 flex justify-center">
+            <div class="text-warm-orange-500 text-4xl mb-4 flex justify-center">
               <i class="fas fa-robot"></i>
             </div>
             <h3 class="text-xl font-semibold mb-4 text-center">
-              AI Question Generation
+              AI Learning Support
             </h3>
             <p class="text-gray-600">
-              Analyzes textbook content and automatically generates optimal exam
-              questions. Supports various formats including multiple choice and
-              written answers.
+              Analyzes and generates optimal learning content for job hunting.
+              Progress from basics to practical skills at your own pace.
             </p>
           </div>
           <div class="p-6 bg-white rounded-lg shadow-lg">
-            <div class="text-sea-pink-500 text-4xl mb-4 flex justify-center">
+            <div class="text-warm-orange-500 text-4xl mb-4 flex justify-center">
               <i class="fas fa-chart-line"></i>
             </div>
             <h3 class="text-xl font-semibold mb-4 text-center">
-              Performance Analysis
+              Progress Tracking
             </h3>
             <p class="text-gray-600">
-              Aggregates and analyzes correct answer rates to visualize weak
-              areas. Supports efficient learning.
+              Visualize your learning progress and maintain motivation.
+              Experience steady growth step by step.
             </p>
           </div>
           <div class="p-6 bg-white rounded-lg shadow-lg">
-            <div class="text-sea-pink-500 text-4xl mb-4 flex justify-center">
+            <div class="text-warm-orange-500 text-4xl mb-4 flex justify-center">
               <i class="fas fa-mobile-alt"></i>
             </div>
             <h3 class="text-xl font-semibold mb-4 text-center">
-              Mobile Support
+              Learn Anytime
             </h3>
             <p class="text-gray-600">
-              Comfortable learning experience on smartphones. Make efficient use
-              of commuting and travel time.
+              Comfortable learning experience on smartphones. Make the most of
+              your time to take steps toward your dreams.
             </p>
           </div>
         </div>
@@ -200,7 +201,7 @@
     </section>
 
     <!-- How it Works Section -->
-    <section id="how-it-works" class="py-16 bg-sea-pink-50">
+    <section id="how-it-works" class="py-16 bg-warm-orange-50">
       <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
           How it Works
@@ -208,41 +209,43 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div class="text-center">
             <div
-              class="w-16 h-16 bg-sea-pink-500 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4"
+              class="w-16 h-16 bg-warm-orange-500 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4"
             >
               1
             </div>
-            <h3 class="text-xl font-semibold mb-2">Create Account</h3>
+            <h3 class="text-xl font-semibold mb-2">Free Registration</h3>
             <p class="text-gray-600">
-              Start immediately with simple registration
+              Take your first step with easy registration
             </p>
           </div>
           <div class="text-center">
             <div
-              class="w-16 h-16 bg-sea-pink-500 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4"
+              class="w-16 h-16 bg-warm-orange-500 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4"
             >
               2
             </div>
-            <h3 class="text-xl font-semibold mb-2">Upload Textbooks</h3>
-            <p class="text-gray-600">Register required pages with photos</p>
+            <h3 class="text-xl font-semibold mb-2">Set Your Goals</h3>
+            <p class="text-gray-600">
+              Learning plan tailored to your objectives
+            </p>
           </div>
           <div class="text-center">
             <div
-              class="w-16 h-16 bg-sea-pink-500 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4"
+              class="w-16 h-16 bg-warm-orange-500 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4"
             >
               3
             </div>
-            <h3 class="text-xl font-semibold mb-2">Generate Questions</h3>
-            <p class="text-gray-600">AI creates optimal questions</p>
+            <h3 class="text-xl font-semibold mb-2">Start Learning</h3>
+            <p class="text-gray-600">AI provides optimal learning materials</p>
           </div>
           <div class="text-center">
             <div
-              class="w-16 h-16 bg-sea-pink-500 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4"
+              class="w-16 h-16 bg-warm-orange-500 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4"
             >
               4
             </div>
-            <h3 class="text-xl font-semibold mb-2">Start Learning</h3>
-            <p class="text-gray-600">Efficiently prepare for exams</p>
+            <h3 class="text-xl font-semibold mb-2">Feel Your Growth</h3>
+            <p class="text-gray-600">Steady progress, step by step</p>
           </div>
         </div>
       </div>
@@ -257,27 +260,27 @@
         <div class="max-w-3xl mx-auto">
           <div class="bg-white rounded-lg shadow-xl overflow-hidden">
             <div class="p-8 text-center">
-              <h3 class="text-2xl font-bold mb-4">Free Plan</h3>
+              <h3 class="text-2xl font-bold mb-4">Starter Plan</h3>
               <div class="text-4xl font-bold mb-6">
                 ¥0<span class="text-lg text-gray-600">/month</span>
               </div>
               <ul class="text-left space-y-4 mb-8">
                 <li class="flex items-center">
-                  <i class="fas fa-check text-sea-pink-500 mr-2"></i>
-                  <span>Register up to 1 subject</span>
+                  <i class="fas fa-check text-warm-orange-500 mr-2"></i>
+                  <span>Unlimited access to basic learning content</span>
                 </li>
                 <li class="flex items-center">
-                  <i class="fas fa-check text-sea-pink-500 mr-2"></i>
-                  <span>Generate up to 10 questions per month</span>
+                  <i class="fas fa-check text-warm-orange-500 mr-2"></i>
+                  <span>Daily learning plan suggestions</span>
                 </li>
                 <li class="flex items-center">
-                  <i class="fas fa-check text-sea-pink-500 mr-2"></i>
-                  <span>Basic performance analysis</span>
+                  <i class="fas fa-check text-warm-orange-500 mr-2"></i>
+                  <span>Basic progress tracking features</span>
                 </li>
               </ul>
               <a
                 href="signup.html"
-                class="inline-block w-full px-6 py-3 bg-sea-pink-500 text-white rounded-lg font-semibold hover:bg-sea-pink-600 transition-colors"
+                class="inline-block w-full px-6 py-3 bg-warm-orange-500 text-white rounded-lg font-semibold hover:bg-warm-orange-600 transition-colors"
               >
                 Start Free
               </a>
@@ -288,7 +291,7 @@
     </section>
 
     <!-- Contact Form -->
-    <section id="contact" class="py-16 bg-sea-pink-50">
+    <section id="contact" class="py-16 bg-warm-orange-50">
       <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
           Contact Us
@@ -315,7 +318,7 @@
                     name="entry.777262386"
                     id="name"
                     required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-sea-pink-500 focus:border-sea-pink-500"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-warm-orange-500 focus:border-warm-orange-500"
                   />
                 </div>
                 <div>
@@ -326,14 +329,14 @@
                     type="text"
                     name="entry.712011450"
                     required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-sea-pink-500 focus:border-sea-pink-500"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-warm-orange-500 focus:border-warm-orange-500"
                   />
                 </div>
               </div>
               <div class="flex justify-center">
                 <button
                   type="submit"
-                  class="px-8 py-3 bg-sea-pink-500 text-white rounded-lg hover:bg-sea-pink-600 transition-colors font-semibold"
+                  class="px-8 py-3 bg-warm-orange-500 text-white rounded-lg hover:bg-warm-orange-600 transition-colors font-semibold"
                 >
                   Submit
                 </button>
@@ -343,14 +346,14 @@
             <!-- Loading State -->
             <div id="loadingState" class="hidden text-center py-12">
               <div
-                class="inline-block animate-spin rounded-full h-12 w-12 border-4 border-sea-pink-500 border-t-transparent"
+                class="inline-block animate-spin rounded-full h-12 w-12 border-4 border-warm-orange-500 border-t-transparent"
               ></div>
               <p class="mt-4 text-gray-600">Sending...</p>
             </div>
 
             <!-- Success State -->
             <div id="successState" class="hidden text-center py-12">
-              <div class="text-sea-pink-500 text-5xl mb-6">
+              <div class="text-warm-orange-500 text-5xl mb-6">
                 <i class="fas fa-check-circle"></i>
               </div>
               <h3 class="text-2xl font-bold text-gray-800 mb-4">
@@ -404,12 +407,12 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-sea-pink-950 text-white py-12">
+    <footer class="bg-warm-orange-950 text-white py-12">
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 class="text-xl font-bold mb-4">StudyGenius</h3>
-            <p class="text-sea-pink-100">
+            <p class="text-warm-orange-100">
               Next-generation learning support platform powered by AI
             </p>
           </div>
@@ -417,24 +420,28 @@
             <h3 class="text-lg font-semibold mb-4">Links</h3>
             <ul class="space-y-2">
               <li>
-                <a href="#features" class="text-sea-pink-100 hover:text-white"
+                <a
+                  href="#features"
+                  class="text-warm-orange-100 hover:text-white"
                   >Features</a
                 >
               </li>
               <li>
                 <a
                   href="#how-it-works"
-                  class="text-sea-pink-100 hover:text-white"
+                  class="text-warm-orange-100 hover:text-white"
                   >How it Works</a
                 >
               </li>
               <li>
-                <a href="#pricing" class="text-sea-pink-100 hover:text-white"
+                <a href="#pricing" class="text-warm-orange-100 hover:text-white"
                   >Pricing</a
                 >
               </li>
               <li>
-                <a href="terms.html" class="text-sea-pink-100 hover:text-white"
+                <a
+                  href="terms.html"
+                  class="text-warm-orange-100 hover:text-white"
                   >Terms of Service</a
                 >
               </li>
@@ -442,22 +449,41 @@
           </div>
           <div>
             <h3 class="text-lg font-semibold mb-4">Contact</h3>
-            <p class="text-sea-pink-100">
+            <p class="text-warm-orange-100">
               Please feel free to contact us with any questions or requests.
             </p>
             <a
               href="mailto:contact@studygenius.jp"
-              class="text-sea-pink-200 hover:text-sea-pink-100"
+              class="text-warm-orange-200 hover:text-warm-orange-100"
               >contact@studygenius.jp</a
             >
           </div>
         </div>
         <div
-          class="mt-8 pt-8 border-t border-sea-pink-900 text-center text-sea-pink-200"
+          class="mt-8 pt-8 border-t border-warm-orange-900 text-center text-warm-orange-200"
         >
           <p>&copy; 2024 StudyGenius. All rights reserved.</p>
         </div>
       </div>
     </footer>
+    <script>
+      window.difyChatbotConfig = {
+        token: "aoXXcDg7VV8tKLzp",
+      };
+    </script>
+    <script
+      src="https://udify.app/embed.min.js"
+      id="aoXXcDg7VV8tKLzp"
+      defer
+    ></script>
+    <style>
+      #dify-chatbot-bubble-button {
+        background-color: #1c64f2 !important;
+      }
+      #dify-chatbot-bubble-window {
+        width: 24rem !important;
+        height: 40rem !important;
+      }
+    </style>
   </body>
 </html>
