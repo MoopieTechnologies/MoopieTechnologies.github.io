@@ -56,26 +56,67 @@
           <a href="#pricing" class="text-gray-600 hover:text-sea-pink-600"
             >Pricing</a
           >
+          <a href="#contact" class="text-gray-600 hover:text-sea-pink-600"
+            >Contact</a
+          >
         </div>
         <div class="flex space-x-4">
-          <a
-            href="login.html"
-            class="px-4 py-2 text-sea-pink-600 hover:text-sea-pink-700"
-            >Login</a
-          >
-          <a
-            href="signup.html"
-            class="px-4 py-2 bg-sea-pink-500 text-white rounded-lg hover:bg-sea-pink-600"
-            >Sign Up</a
-          >
-          <a
-            href="index.html"
-            class="px-4 py-2 text-sea-pink-600 hover:text-sea-pink-700"
-            >日本語</a
-          >
+          <div class="relative">
+            <button
+              id="languageButton"
+              class="px-4 py-2 text-sea-pink-600 hover:text-sea-pink-700 flex items-center space-x-2"
+              onclick="toggleLanguageMenu()"
+            >
+              <span class="flag-icon">🇺🇸</span>
+              <span>English</span>
+              <i class="fas fa-chevron-down ml-1"></i>
+            </button>
+            <div
+              id="languageMenu"
+              class="hidden absolute right-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl z-50"
+            >
+              <a
+                href="index.html"
+                class="block px-4 py-2 text-gray-800 hover:bg-sea-pink-50 flex items-center space-x-3"
+              >
+                <span class="flag-icon">🇯🇵</span>
+                <span>日本語</span>
+              </a>
+              <a
+                href="index_en.html"
+                class="block px-4 py-2 text-gray-800 hover:bg-sea-pink-50 flex items-center space-x-3"
+              >
+                <span class="flag-icon">🇺🇸</span>
+                <span>English</span>
+              </a>
+              <a
+                href="index_zh.html"
+                class="block px-4 py-2 text-gray-800 hover:bg-sea-pink-50 flex items-center space-x-3"
+              >
+                <span class="flag-icon">🇨🇳</span>
+                <span>中文</span>
+              </a>
+            </div>
+          </div>
         </div>
       </nav>
     </header>
+
+    <script>
+      function toggleLanguageMenu() {
+        const menu = document.getElementById("languageMenu");
+        menu.classList.toggle("hidden");
+      }
+
+      // Close menu when clicking outside
+      document.addEventListener("click", function (event) {
+        const menu = document.getElementById("languageMenu");
+        const button = document.getElementById("languageButton");
+        if (!button.contains(event.target) && !menu.contains(event.target)) {
+          menu.classList.add("hidden");
+        }
+      });
+    </script>
 
     <!-- Main Visual -->
     <section
@@ -101,7 +142,7 @@
           </div>
           <div class="md:w-1/2">
             <img
-              src="top-image.jpg"
+              src="https://placehold.co/400x225/EEE/31343C.png"
               alt="StudyGenius App Image"
               class="rounded-lg shadow-xl w-full h-auto max-w-[789px] max-h-[1024px] object-contain"
             />
@@ -118,10 +159,12 @@
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="p-6 bg-white rounded-lg shadow-lg">
-            <div class="text-sea-pink-500 text-4xl mb-4">
+            <div class="text-sea-pink-500 text-4xl mb-4 flex justify-center">
               <i class="fas fa-robot"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-4">AI Question Generation</h3>
+            <h3 class="text-xl font-semibold mb-4 text-center">
+              AI Question Generation
+            </h3>
             <p class="text-gray-600">
               Analyzes textbook content and automatically generates optimal exam
               questions. Supports various formats including multiple choice and
@@ -129,20 +172,24 @@
             </p>
           </div>
           <div class="p-6 bg-white rounded-lg shadow-lg">
-            <div class="text-sea-pink-500 text-4xl mb-4">
+            <div class="text-sea-pink-500 text-4xl mb-4 flex justify-center">
               <i class="fas fa-chart-line"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-4">Performance Analysis</h3>
+            <h3 class="text-xl font-semibold mb-4 text-center">
+              Performance Analysis
+            </h3>
             <p class="text-gray-600">
               Aggregates and analyzes correct answer rates to visualize weak
               areas. Supports efficient learning.
             </p>
           </div>
           <div class="p-6 bg-white rounded-lg shadow-lg">
-            <div class="text-sea-pink-500 text-4xl mb-4">
+            <div class="text-sea-pink-500 text-4xl mb-4 flex justify-center">
               <i class="fas fa-mobile-alt"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-4">Mobile Support</h3>
+            <h3 class="text-xl font-semibold mb-4 text-center">
+              Mobile Support
+            </h3>
             <p class="text-gray-600">
               Comfortable learning experience on smartphones. Make efficient use
               of commuting and travel time.
@@ -235,6 +282,122 @@
                 Start Free
               </a>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="py-16 bg-sea-pink-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+          Contact Us
+        </h2>
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-xl p-8">
+          <div class="teQAzf">
+            <form
+              action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfhFZZ8QPD9iIUpfeanTgUyI6ZgB-e6uYaMenIbnI3m8dfSTA/formResponse"
+              target="_self"
+              method="POST"
+              id="mG61Hd"
+              class="space-y-6"
+            >
+              <div class="space-y-4">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                  >
+                    Name <span class="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="entry.777262386"
+                    id="name"
+                    required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-sea-pink-500 focus:border-sea-pink-500"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1">
+                    Unemployment Question <span class="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="entry.712011450"
+                    required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-sea-pink-500 focus:border-sea-pink-500"
+                  />
+                </div>
+              </div>
+              <div class="flex justify-center">
+                <button
+                  type="submit"
+                  class="px-8 py-3 bg-sea-pink-500 text-white rounded-lg hover:bg-sea-pink-600 transition-colors font-semibold"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+
+            <!-- Loading State -->
+            <div id="loadingState" class="hidden text-center py-12">
+              <div
+                class="inline-block animate-spin rounded-full h-12 w-12 border-4 border-sea-pink-500 border-t-transparent"
+              ></div>
+              <p class="mt-4 text-gray-600">Sending...</p>
+            </div>
+
+            <!-- Success State -->
+            <div id="successState" class="hidden text-center py-12">
+              <div class="text-sea-pink-500 text-5xl mb-6">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-800 mb-4">
+                Thank you for your inquiry
+              </h3>
+              <p class="text-gray-600">
+                We will review your message and get back to you soon.
+              </p>
+            </div>
+
+            <script>
+              document
+                .getElementById("mG61Hd")
+                .addEventListener("submit", async function (e) {
+                  e.preventDefault();
+
+                  // Hide form and button, show loading
+                  this.style.display = "none";
+                  document.getElementById("loadingState").style.display =
+                    "block";
+
+                  // Prepare form data
+                  const formData = new FormData(this);
+
+                  try {
+                    // Use no-cors mode to avoid Google Forms CORS policy
+                    await fetch(this.action, {
+                      method: "POST",
+                      mode: "no-cors",
+                      body: formData,
+                    });
+
+                    // After sending, hide loading and show completion message
+                    document.getElementById("loadingState").style.display =
+                      "none";
+                    document.getElementById("successState").style.display =
+                      "block";
+                  } catch (error) {
+                    console.error("Send error:", error);
+                    // Show form again on error
+                    this.style.display = "block";
+                    document.getElementById("loadingState").style.display =
+                      "none";
+                    alert("Failed to send. Please try again.");
+                  }
+                });
+            </script>
           </div>
         </div>
       </div>
