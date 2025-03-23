@@ -61,24 +61,62 @@
           >
         </div>
         <div class="flex space-x-4">
-          <a
-            href="login.html"
-            class="px-4 py-2 text-sea-pink-600 hover:text-sea-pink-700"
-            >登录</a
-          >
-          <a
-            href="signup.html"
-            class="px-4 py-2 bg-sea-pink-500 text-white rounded-lg hover:bg-sea-pink-600"
-            >注册</a
-          >
-          <a
-            href="index.html"
-            class="px-4 py-2 text-sea-pink-600 hover:text-sea-pink-700"
-            >日本語</a
-          >
+          <div class="relative">
+            <button
+              id="languageButton"
+              class="px-4 py-2 text-sea-pink-600 hover:text-sea-pink-700 flex items-center space-x-2"
+              onclick="toggleLanguageMenu()"
+            >
+              <span class="flag-icon">🇨🇳</span>
+              <span>中文</span>
+              <i class="fas fa-chevron-down ml-1"></i>
+            </button>
+            <div
+              id="languageMenu"
+              class="hidden absolute right-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl z-50"
+            >
+              <a
+                href="index.html"
+                class="block px-4 py-2 text-gray-800 hover:bg-sea-pink-50 flex items-center space-x-3"
+              >
+                <span class="flag-icon">🇯🇵</span>
+                <span>日本語</span>
+              </a>
+              <a
+                href="index_en.html"
+                class="block px-4 py-2 text-gray-800 hover:bg-sea-pink-50 flex items-center space-x-3"
+              >
+                <span class="flag-icon">🇺🇸</span>
+                <span>English</span>
+              </a>
+              <a
+                href="index_zh.html"
+                class="block px-4 py-2 text-gray-800 hover:bg-sea-pink-50 flex items-center space-x-3"
+              >
+                <span class="flag-icon">🇨🇳</span>
+                <span>中文</span>
+              </a>
+            </div>
+          </div>
         </div>
       </nav>
     </header>
+
+    <script>
+      function toggleLanguageMenu() {
+        const menu = document.getElementById("languageMenu");
+        menu.classList.toggle("hidden");
+      }
+
+      // 点击外部时关闭菜单
+      document.addEventListener("click", function (event) {
+        const menu = document.getElementById("languageMenu");
+        const button = document.getElementById("languageButton");
+        if (!button.contains(event.target) && !menu.contains(event.target)) {
+          menu.classList.add("hidden");
+        }
+      });
+    </script>
 
     <!-- 主视觉 -->
     <section
@@ -103,7 +141,7 @@
           </div>
           <div class="md:w-1/2">
             <img
-              src="top-image.jpg"
+              src="https://placehold.co/400x225/EEE/31343C.png"
               alt="StudyGenius应用界面"
               class="rounded-lg shadow-xl w-full h-auto max-w-[789px] max-h-[1024px] object-contain"
             />
@@ -120,28 +158,28 @@
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="p-6 bg-white rounded-lg shadow-lg">
-            <div class="text-sea-pink-500 text-4xl mb-4">
+            <div class="text-sea-pink-500 text-4xl mb-4 flex justify-center">
               <i class="fas fa-robot"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-4">AI题目生成</h3>
+            <h3 class="text-xl font-semibold mb-4 text-center">AI题目生成</h3>
             <p class="text-gray-600">
               分析教科书内容，自动生成最优化的考试题目。支持选择题和问答题等多种形式。
             </p>
           </div>
           <div class="p-6 bg-white rounded-lg shadow-lg">
-            <div class="text-sea-pink-500 text-4xl mb-4">
+            <div class="text-sea-pink-500 text-4xl mb-4 flex justify-center">
               <i class="fas fa-chart-line"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-4">成绩分析</h3>
+            <h3 class="text-xl font-semibold mb-4 text-center">成绩分析</h3>
             <p class="text-gray-600">
               统计和分析题目的正确率，可视化薄弱环节。为您提供高效的学习支持。
             </p>
           </div>
           <div class="p-6 bg-white rounded-lg shadow-lg">
-            <div class="text-sea-pink-500 text-4xl mb-4">
+            <div class="text-sea-pink-500 text-4xl mb-4 flex justify-center">
               <i class="fas fa-mobile-alt"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-4">移动端支持</h3>
+            <h3 class="text-xl font-semibold mb-4 text-center">移动端支持</h3>
             <p class="text-gray-600">
               支持手机端舒适学习。充分利用通勤和移动时间。
             </p>
@@ -243,117 +281,110 @@
           联系我们
         </h2>
         <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-xl p-8">
-          <!-- 表单主体 -->
-          <form
-            id="contactForm"
-            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfhFZZ8QPD9iIUpfeanTgUyI6ZgB-e6uYaMenIbnI3m8dfSTA/formResponse"
-            method="POST"
-            class="space-y-6"
-          >
-            <div class="space-y-4">
-              <div>
-                <label
-                  for="name"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                >
-                  姓名 <span class="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  name="entry.777262386"
-                  id="name"
-                  required
-                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-sea-pink-500 focus:border-sea-pink-500"
-                />
-              </div>
-              <div>
-                <label class="block text-sm font-medium text-gray-700 mb-1">
-                  无业问题 <span class="text-red-500">*</span>
-                </label>
-                <div class="space-y-2">
-                  <label class="flex items-center">
-                    <input
-                      type="checkbox"
-                      name="entry.712011450"
-                      value="无敌"
-                      class="h-4 w-4 text-sea-pink-600 focus:ring-sea-pink-500 border-gray-300 rounded"
-                    />
-                    <span class="ml-2 text-gray-700">无敌</span>
+          <div class="teQAzf">
+            <form
+              action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfhFZZ8QPD9iIUpfeanTgUyI6ZgB-e6uYaMenIbnI3m8dfSTA/formResponse"
+              target="_self"
+              method="POST"
+              id="mG61Hd"
+              class="space-y-6"
+            >
+              <div class="space-y-4">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                  >
+                    姓名 <span class="text-red-500">*</span>
                   </label>
-                  <label class="flex items-center">
-                    <input
-                      type="checkbox"
-                      name="entry.712011450"
-                      value="金"
-                      class="h-4 w-4 text-sea-pink-600 focus:ring-sea-pink-500 border-gray-300 rounded"
-                    />
-                    <span class="ml-2 text-gray-700">金</span>
+                  <input
+                    type="text"
+                    name="entry.777262386"
+                    id="name"
+                    required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-sea-pink-500 focus:border-sea-pink-500"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1">
+                    无业问题 <span class="text-red-500">*</span>
                   </label>
+                  <input
+                    type="text"
+                    name="entry.712011450"
+                    required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-sea-pink-500 focus:border-sea-pink-500"
+                  />
                 </div>
               </div>
-            </div>
-            <div class="flex justify-center">
-              <button
-                type="submit"
-                id="submitButton"
-                class="px-8 py-3 bg-sea-pink-500 text-white rounded-lg hover:bg-sea-pink-600 transition-colors font-semibold"
-              >
-                提交
-              </button>
-            </div>
-          </form>
+              <div class="flex justify-center">
+                <button
+                  type="submit"
+                  class="px-8 py-3 bg-sea-pink-500 text-white rounded-lg hover:bg-sea-pink-600 transition-colors font-semibold"
+                >
+                  提交
+                </button>
+              </div>
+            </form>
 
-          <!-- 发送中显示 -->
-          <div id="loadingState" class="hidden text-center py-12">
-            <div
-              class="inline-block animate-spin rounded-full h-12 w-12 border-4 border-sea-pink-500 border-t-transparent"
-            ></div>
-            <p class="mt-4 text-gray-600">发送中...</p>
-          </div>
-
-          <!-- 发送完成显示 -->
-          <div id="successState" class="hidden text-center py-12">
-            <div class="text-sea-pink-500 text-5xl mb-6">
-              <i class="fas fa-check-circle"></i>
+            <!-- 发送中显示 -->
+            <div id="loadingState" class="hidden text-center py-12">
+              <div
+                class="inline-block animate-spin rounded-full h-12 w-12 border-4 border-sea-pink-500 border-t-transparent"
+              ></div>
+              <p class="mt-4 text-gray-600">发送中...</p>
             </div>
-            <h3 class="text-2xl font-bold text-gray-800 mb-4">感谢您的咨询</h3>
-            <p class="text-gray-600">我们会尽快确认内容并由专人与您联系。</p>
+
+            <!-- 发送完成显示 -->
+            <div id="successState" class="hidden text-center py-12">
+              <div class="text-sea-pink-500 text-5xl mb-6">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-800 mb-4">
+                感谢您的咨询
+              </h3>
+              <p class="text-gray-600">我们会尽快确认内容并由专人与您联系。</p>
+            </div>
+
+            <script>
+              document
+                .getElementById("mG61Hd")
+                .addEventListener("submit", async function (e) {
+                  e.preventDefault();
+
+                  // 隐藏表单和按钮，显示加载中
+                  this.style.display = "none";
+                  document.getElementById("loadingState").style.display =
+                    "block";
+
+                  // 准备表单数据
+                  const formData = new FormData(this);
+
+                  try {
+                    // 使用no-cors模式避免Google Forms的CORS策略
+                    await fetch(this.action, {
+                      method: "POST",
+                      mode: "no-cors",
+                      body: formData,
+                    });
+
+                    // 发送完成后，隐藏加载中，显示完成消息
+                    document.getElementById("loadingState").style.display =
+                      "none";
+                    document.getElementById("successState").style.display =
+                      "block";
+                  } catch (error) {
+                    console.error("发送错误:", error);
+                    // 发生错误时重新显示表单
+                    this.style.display = "block";
+                    document.getElementById("loadingState").style.display =
+                      "none";
+                    alert("发送失败。请重试。");
+                  }
+                });
+            </script>
           </div>
         </div>
-
-        <script>
-          document
-            .getElementById("contactForm")
-            .addEventListener("submit", async function (e) {
-              e.preventDefault();
-
-              // 隐藏表单和按钮，显示加载中
-              this.style.display = "none";
-              document.getElementById("loadingState").style.display = "block";
-
-              // 准备表单数据
-              const formData = new FormData(this);
-
-              try {
-                // 使用no-cors模式避免Google Forms的CORS策略
-                await fetch(this.action, {
-                  method: "POST",
-                  mode: "no-cors",
-                  body: formData,
-                });
-
-                // 发送完成后，隐藏加载中，显示完成消息
-                document.getElementById("loadingState").style.display = "none";
-                document.getElementById("successState").style.display = "block";
-              } catch (error) {
-                console.error("发送错误:", error);
-                // 发生错误时重新显示表单
-                this.style.display = "block";
-                document.getElementById("loadingState").style.display = "none";
-                alert("发送失败。请重试。");
-              }
-            });
-        </script>
       </div>
     </section>
 
